@@ -1,0 +1,26 @@
+.page-hero {
+    margin-top: 96px;
+    width: 100%;
+    margin-bottom: 120px;
+    background: url('../../assets/patterns/white-circles.svg'),
+        url('../../assets/images/about-hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: 234px 63px, cover;
+    background-position: right -33px center, center center;
+    background-position: right -33px center, center center;
+
+    &__container {
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
+
+    &__title {
+        @include h1(white);
+    }
+
+    @media (max-width: 376px) {
+        background: none,
+            url('../../assets/images/about-hero-desktop.jpg');
+    }
+
+}

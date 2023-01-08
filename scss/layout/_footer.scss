@@ -1,0 +1,130 @@
+.footer {
+    width: 100%;
+
+    .store {
+        width: 100%;
+        background-color: $darkNavy;
+
+        &__container {
+            width: 100%;
+            padding-top: 102px;
+            padding-bottom: 102px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 200%;
+                height: 100%;
+                bottom: -50%;
+                right: -130%;
+                background-image: url('../../assets/patterns/cta-circles.svg');
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__title {
+            @include h2;
+            color: white;
+            width: 100%;
+            max-width: 415px;
+        }
+
+        &__links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .store__img {
+            width: 159px;
+            height: 56px;
+        }
+    }
+
+    background-color: #333A44;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+        margin-bottom: 32px;
+    }
+
+    .sitenav {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+        .logo-link {
+            margin-right: 58px;
+        }
+
+        .logo {
+            width: 107px;
+            height: 28px;
+        }
+
+        &__list {
+            display: flex;
+            gap: 32px;
+        }
+
+
+        &__link {
+            color: $dimGrey;
+
+            &:active {
+                color: $yellow;
+            }
+        }
+    }
+
+    .footer__icon {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        svg {
+            &:active path {
+                fill: $lightGrey;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .store__container {
+            width: 100%;
+            flex-direction: column;
+            gap: 40px;
+
+            &::before {
+                right: -70%;
+            }
+        }
+
+        .store__title {
+            text-align: center;
+        }
+    }
+    @media (max-width: 600px) {
+        &__container{
+            flex-direction: column;
+            .sitenav{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-right: 0;
+                margin-bottom: 85px;
+                gap: 41px;
+                .logo-link{
+                    margin: 0;
+                }
+                &__list{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

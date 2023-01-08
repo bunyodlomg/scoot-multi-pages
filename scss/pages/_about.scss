@@ -1,0 +1,101 @@
+.faqs {
+    width: 100%;
+
+    &__container {
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 64px;
+    }
+
+    &__title {
+        @include h2;
+    }
+
+    &__works {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--title {
+            display: inline-block;
+            @include h2;
+            letter-spacing: -1.79;
+            font-size: 4rem;
+            width: 30%;
+            max-width: 600px;
+        }
+    }
+
+    &__driving {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--title {
+            @include h2;
+            letter-spacing: -1.79;
+            font-size: 4rem;
+            width: 30%;
+            max-width: 600px;
+        }
+    }
+
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("../../assets/icons/faqs__arrow.svg");
+    }
+
+    .accordion-button::after {
+        background-image: url("../../assets/icons/faqs__arrow.svg");
+    }
+
+    .accordion {
+        width: 70%;
+        max-width: 730px;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    .accordion-button {
+        padding: 32px 40px;
+        @include h4;
+        color: $darkNavy !important;
+        background-color: #F2F5F9;
+
+        &:active {
+            background-color: $lightYellow;
+        }
+    }
+
+    .accordion-body {
+        background-color: #F2F5F9;
+    }
+
+    @media (max-width: 768px) {
+
+        &__works,
+        &__driving {
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__works--title,
+        &__driving--title {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        .accordion {
+            width: 100%;
+            max-width: 730px;
+        }
+    }
+}

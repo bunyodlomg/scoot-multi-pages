@@ -1,0 +1,82 @@
+@mixin font($font, $size, $weight, $line, $color){
+    font: {
+        family: $font, sans-serif;
+        size: $size + rem;
+        weight: $weight;
+    }
+    line-height: $line + px;
+    color: $color;
+}
+@mixin body-font{
+    font: {
+        family: 'Lexend Deca', sans-serif;
+        size: 1.5rem;
+        weight: 400;
+    }
+    line-height: 25px;
+    color: $darkNavy;
+}
+@mixin h1($color){
+    font: {
+        family: 'Space Mono', sans-serif;
+        size: 5.6rem;
+        weight: 700;
+    }
+    line-height: 56px;
+    color: $color;
+    letter-spacing: -2.5px;
+}
+@mixin h2{
+    font: {
+        family: 'Space Mono', sans-serif;
+        size: 4.8rem;
+        weight: 700;
+    }
+    line-height: 48px;
+    color: $darkNavy;
+    letter-spacing: -2.14px;
+}
+@mixin h3{
+    font: {
+        family: 'Space Mono', sans-serif;
+        size: 4rem;
+        weight: 700;
+    }
+    line-height: 48px;
+    color: $darkNavy;
+    letter-spacing: -1.79px;
+}
+@mixin h4{
+    font: {
+        family: 'Space Mono', sans-serif;
+        size: 2.4rem;
+        weight: 700;
+    }
+    line-height: 28px;
+    color: $darkNavy;
+    letter-spacing: -1.07px;
+}
+@mixin btn($p1, $p2) {
+    padding: $p1 $p2;
+    background-color: $yellow;
+    border: 4px solid $yellow;
+    color: white;
+    transition: .5s;
+    &:hover {
+        background-color: inherit;
+        color: $yellow;
+    }
+}
+
+// @mixin responsive($deviceType) {
+//     @if $deviceType == teblet {
+//         @media screen and (max-width:800px) {
+//             @content;
+//         }
+//     }
+//     @else if $deviceType == mobile {
+//         @media screen and (max-width:400px) {
+//             @content;
+//         }
+//     }
+// }
